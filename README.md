@@ -20,7 +20,7 @@ To harvest lesions from the [DeepLesion](https://nihcc.app.box.com/v/DeepLesion)
 
 ## Usage 
 1. Convert data formation from *png* to *nifti*:  
-   Please download [**DL_save_nifti.py**](https://nihcc.app.box.com/v/DeepLesion/file/305578281723) from the official website of [DeepLesion](https://nihcc.app.box.com/v/DeepLesion).  
+   Please download [**DL_save_nifti.py**](https://nihcc.app.box.com/v/DeepLesion/file/305578281723) from the official website of [DeepLesion](https://nihcc.app.box.com/v/DeepLesion). Then run, 
     ```python 
     python DL_save_nifti.py 
     ```
