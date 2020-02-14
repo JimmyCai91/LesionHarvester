@@ -37,7 +37,7 @@ def IoU(detected_box, groundtruth_box):
   return overlaps
 
 
-def P3DIoU(recist_box, tracklet, keep2dBoxes=False, boxFusion='Mean'):
+def P3DIoU(recist_box, tracklet):
   '''
     P3D IoU Evaluation Metric
     input:
@@ -45,13 +45,6 @@ def P3DIoU(recist_box, tracklet, keep2dBoxes=False, boxFusion='Mean'):
 
       tracklet (dictionary): {z1: [x1_min, y1_min, x1_max, y1_max], 
                  z2: [x2_min, y2_min, x2_max, y2_max], ...}.
-
-      keep2dBoxes: use the detected 2d box for evaluation, otherwise merge 
-        2d boxes into 3d before IoU measurement. 
-
-      boxFusion: 
-        'MaxMin': find the largest extent for 3d box.
-        'Mean': construct the 3d box by taking detection score into consideration.
 
     algorithm:
     
@@ -62,17 +55,6 @@ def P3DIoU(recist_box, tracklet, keep2dBoxes=False, boxFusion='Mean'):
   '''
    
   boxes = np.array([xy for _, xy in tracklet])
-
-  if not keep2dBoxes and boxes.shape[0] > 1:
-    if boxFusion == 'MinMax':
-      boxes[:,0] = np.min(boxes[:,0])
-      boxes[:,1] = np.min(boxes[:,1])
-      boxes[:,2] = np.max(boxes[:,2])
-      boxes[:,3] = np.max(boxes[:,3])
-
-    elif boxFusion == 'Mean':
-      for i in [0,1,2,3]:
-        boxes[:,i] = (boxes[:,i]*boxes[:,-1]).sum() / boxes[:,-1].sum()
 
   zs = [z for z, _ in tracklet]
   z, xy = recist_box
