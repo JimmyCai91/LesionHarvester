@@ -37,7 +37,7 @@ def IoU(detected_box, groundtruth_box):
   return overlaps
 
 
-def P3DIoU(recist_box, tracklet, keep2dBoxes=True, boxFusion=None):
+def P3DIoU(recist_box, tracklet, keep2dBoxes=False, boxFusion='Mean'):
   '''
     P3D IoU Evaluation Metric
     input:

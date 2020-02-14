@@ -1,7 +1,7 @@
 # Lesion Harvester on DeepLesion
 
 ## Introduction
-To harvest lesions from the [DeepLesion](https://nihcc.app.box.com/v/DeepLesion) dataset, we randomly select 844 volumes from the original 14075 training CT. These are then annotated by a board-certified radiologist. Of these, we select 744 as $V_{M}$ (5.3%) and leave another 100 as an evaluation set for lesion harvesting. This latter subset, denoted $V_{H}^{test}$, is treated identically at $V_{H}$, meaning the algorithm only sees the original DeepLesion RECIST marks. After convergence, we can measure the precision and recall of the harvested lesions. In addition, we later measure detection performance on systems trained on our harvested lesions by also fully annotating 1071 of the testing CT volumes. These volumes, denoted $V_{D}^{test}$, are never seen in our harvesting framework.  
+To harvest lesions from the [DeepLesion](https://nihcc.app.box.com/v/DeepLesion) dataset [1], we randomly select 844 volumes from the original 14075 training CT. These are then annotated by a board-certified radiologist. Of these, we select 744 as $V_{M}$ (5.3%) and leave another 100 as an evaluation set for lesion harvesting. This latter subset, denoted $V_{H}^{test}$, is treated identically at $V_{H}$, meaning the algorithm only sees the original DeepLesion RECIST marks. After convergence, we can measure the precision and recall of the harvested lesions. In addition, we later measure detection performance on systems trained on our harvested lesions by also fully annotating 1071 of the testing CT volumes. These volumes, denoted $V_{D}^{test}$, are never seen in our harvesting framework.  
 
 ## Usage 
 1. Convert data formation from *png* to *nifti*:  
@@ -66,4 +66,9 @@ If you find this repository useful for your research, please use the following B
   booktitle={arXiv preprint arXiv:2001.07776},
   year={2020}
 }
+```
+
+## Reference 
+```
+[1] Yan, Ke, Xiaosong Wang, Le Lu, and Ronald M. Summers. "DeepLesion: automated mining of large-scale lesion annotations and universal lesion detection with deep learning." Journal of medical imaging 5, no. 3 (2018): 036501.
 ```
