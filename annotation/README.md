@@ -10,7 +10,11 @@
 | Revised-Train100.pkl | $V_{H}^{test}$ |
 | Revised-Test1071.pkl | $V_{D}^{test}$ |
 | 3D-Box.pkl | 3D bounding box annotation of volumes selected from $V_{D}^{test}$. |
-> RECIST marks -> pad 5px in each direction -> bounding boxes.
+
+1. Basing on DeepLesion's implementation, we generate ground-truth bounding box by: RECIST marks -> pad 5px in each direction -> bounding boxes. 
+2. We removed RECIST marks which are defined as being noisy by DeepLesion. 
+3. Please use the updated version of RECIST-Box-Train.pkl, RECIST-Box-Test.pkl as these two files before commit 'e837df52a8173564222e5b3303a6eeb499795577' (02/28/2020) contains extra annotations from Reivsed-Train744.pkl and Revised-Test1071.pkl, respectively. 
+
 
 ### from Lesion Harvester 
 | File Name | Description |
