@@ -56,9 +56,8 @@ A subset of the testing subvolumes were also annotated with 3D bounding boxes.
 
 <p align="center">
     <img src="images/example.png" align="center" height="920px">
-
-    Fig. 1: Examples of 3D detection results and mined positive lesions from the harvesting set $V_H$. We use green and blue boxes to show RECIST-marked and mined lesions, respectively. Each 3D detection consists of multiple axial slices and we show 5 typical slices: the starting slice, the RECIST slice, the ending slice, and two intermediate slices. We show RECIST marks as crosses with red and blue lines. We also show one failure case at the bottom row indicated by red arrows.
 </p>
+Fig. 1: Examples of 3D detection results and mined positive lesions from the harvesting set $V_H$. We use green and blue boxes to show RECIST-marked and mined lesions, respectively. Each 3D detection consists of multiple axial slices and we show 5 typical slices: the starting slice, the RECIST slice, the ending slice, and two intermediate slices. We show RECIST marks as crosses with red and blue lines. We also show one failure case at the bottom row indicated by red arrows.
 
 
 ## Citation
@@ -74,5 +73,7 @@ If you find this repository useful for your research, please cite the following:
 
 ## Reference 
 ```
-[1] Yan, Ke, Xiaosong Wang, Le Lu, and Ronald M. Summers. "DeepLesion: automated mining of large-scale lesion annotations and universal lesion detection with deep learning." Journal of medical imaging 5, no. 3 (2018): 036501.
+[1] Yan, Ke, Xiaosong Wang, Le Lu, and Ronald M. Summers.  
+    "DeepLesion: automated mining of large-scale lesion annotations and universal lesion detection with deep learning."  
+    Journal of medical imaging 5, no. 3 (2018): 036501.
 ```
