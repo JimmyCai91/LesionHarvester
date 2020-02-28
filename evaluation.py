@@ -160,6 +160,7 @@ if __name__ == '__main__':
               hits[volume_ids[i]][j] = True 
               nHits += 1
             else:
+              # Here we follow AP evalutation in Pascal VOC (https://github.com/rbgirshick/py-faster-rcnn/blob/781a917b378dbfdedb45b6a56189a31982da1b43/lib/datasets/voc_eval.py#L187)
               nMissAP += 1
 
       tps.append(nHits)
